@@ -1,12 +1,104 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Education from '../components/Education';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import YouTube from '../components/YouTube';
+import SocialMedia from '../components/SocialMedia';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+import { Github, Linkedin, Twitter, ArrowUp } from 'lucide-react';
 
 const Index = () => {
+  useEffect(() => {
+    // Initialize skill bars animation
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progressBar = entry.target as HTMLElement;
+            const width = progressBar.getAttribute('data-width');
+            if (width) {
+              progressBar.style.width = width;
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(bar => observer.observe(bar));
+
+    return () => {
+      skillBars.forEach(bar => observer.unobserve(bar));
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <Education />
+      <Skills />
+      <YouTube />
+      <Projects />
+      <SocialMedia />
+      <Contact />
+      <Footer />
+      
+      {/* Fixed Social Bar */}
+      <div className="fixed left-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gray-300 dark:after:bg-gray-700">
+        <a 
+          href="https://github.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="social-icon"
+          aria-label="GitHub"
+        >
+          <Github size={20} />
+        </a>
+        <a 
+          href="https://linkedin.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="social-icon"
+          aria-label="LinkedIn"
+        >
+          <Linkedin size={20} />
+        </a>
+        <a 
+          href="https://twitter.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="social-icon"
+          aria-label="Twitter"
+        >
+          <Twitter size={20} />
+        </a>
       </div>
+      
+      {/* Email Side Bar */}
+      <div className="fixed right-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gray-300 dark:after:bg-gray-700">
+        <a 
+          href="mailto:hello@johndoe.com" 
+          className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors vertical-text tracking-widest"
+          style={{ writingMode: 'vertical-rl' }}
+        >
+          hello@johndoe.com
+        </a>
+      </div>
+      
+      {/* Back to Top Button */}
+      <button 
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed right-6 bottom-6 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors z-10"
+        aria-label="Back to top"
+      >
+        <ArrowUp size={18} />
+      </button>
     </div>
   );
 };
