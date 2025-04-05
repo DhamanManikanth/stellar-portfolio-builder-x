@@ -45,12 +45,12 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="education" className="py-20 bg-customDark-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-2">My Journey</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Educational Background</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <Badge variant="outline" className="mb-2 border-customAccent text-customAccent">My Journey</Badge>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 section-title">Educational <span>Background</span></h2>
+          <p className="text-customText-body max-w-2xl mx-auto">
             My academic journey has equipped me with a foundation in computer science and technical skills.
           </p>
         </div>
@@ -62,31 +62,31 @@ const Education = () => {
               className="timeline-item opacity-0 animate-fade-in"
               style={{ animationDelay: `${0.2 * index}s` }}
             >
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden custom-card bg-customDark-card border-none">
                 <CardContent className="p-0">
                   <div className="p-6">
                     <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                       <div>
-                        <h3 className="text-xl font-bold text-primary">{item.degree}</h3>
-                        <p className="text-gray-700 dark:text-gray-300 font-medium">{item.specialization}</p>
+                        <h3 className="text-xl font-bold text-customAccent">{item.degree}</h3>
+                        <p className="text-white font-medium">{item.specialization}</p>
                       </div>
-                      <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
-                        <Calendar size={16} className="mr-1" />
+                      <div className="flex items-center text-customText-body text-sm">
+                        <Calendar size={16} className="mr-1 text-customAccent" />
                         {item.duration}
                       </div>
                     </div>
                     
                     <div className="flex items-center mb-4">
-                      <GraduationCap size={18} className="text-primary mr-2" />
-                      <span className="text-gray-700 dark:text-gray-300">{item.institution}</span>
+                      <GraduationCap size={18} className="text-customAccent mr-2" />
+                      <span className="text-white">{item.institution}</span>
                     </div>
                     
-                    <p className="text-gray-600 dark:text-gray-400 mb-4">{item.description}</p>
+                    <p className="text-customText-body mb-4">{item.description}</p>
                     
                     {item.achievements.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {item.achievements.map((achievement, i) => (
-                          <Badge key={i} variant="secondary">{achievement}</Badge>
+                          <Badge key={i} variant="secondary" className="bg-customDark-background text-customText-body">{achievement}</Badge>
                         ))}
                       </div>
                     )}

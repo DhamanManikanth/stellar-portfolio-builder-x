@@ -57,6 +57,26 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom theme colors
+				customDark: {
+					background: '#0a0f1c',
+					card: '#1d2736',
+				},
+				customAccent: '#00bfff',
+				customText: {
+					body: '#a0a0a0',
+					heading: '#ffffff',
+					accent: '#00bfff',
+				},
+			},
+			boxShadow: {
+				'glow-sm': '0 0 10px rgba(0, 191, 255, 0.5)',
+				'glow-md': '0 0 15px rgba(0, 191, 255, 0.7)',
+				'glow-lg': '0 0 20px rgba(0, 191, 255, 0.9)',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-dark': 'linear-gradient(to bottom, #0a0f1c, #000000)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

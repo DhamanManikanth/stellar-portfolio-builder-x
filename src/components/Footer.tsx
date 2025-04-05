@@ -6,12 +6,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 py-12">
+    <footer className="bg-customDark-card py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-primary mb-4">Dhaman Manikanth</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+            <h3 className="text-2xl font-bold text-customAccent mb-4">Dhaman Manikanth</h3>
+            <p className="text-customText-body mb-4 max-w-md">
               Student and Web Developer specializing in front-end technologies
               and sharing college experiences through YouTube videos.
             </p>
@@ -72,35 +72,35 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-4">Quick Links</h4>
+            <h4 className="font-bold text-lg mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Home</a>
+                <a href="#home" className="text-customText-body hover:text-customAccent transition-colors">Home</a>
               </li>
               <li>
-                <a href="#education" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Education</a>
+                <a href="#education" className="text-customText-body hover:text-customAccent transition-colors">Education</a>
               </li>
               <li>
-                <a href="#skills" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Skills</a>
+                <a href="#skills" className="text-customText-body hover:text-customAccent transition-colors">Skills</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Projects</a>
+                <a href="#projects" className="text-customText-body hover:text-customAccent transition-colors">Projects</a>
               </li>
               <li>
-                <a href="#youtube" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">YouTube</a>
+                <a href="#youtube" className="text-customText-body hover:text-customAccent transition-colors">YouTube</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">Contact</a>
+                <a href="#contact" className="text-customText-body hover:text-customAccent transition-colors">Contact</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-4">Contact</h4>
+            <h4 className="font-bold text-lg mb-4 text-white">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-gray-600 dark:text-gray-400">Hyderabad, Telangana, India</li>
+              <li className="text-customText-body">Hyderabad, Telangana, India</li>
               <li>
-                <a href="mailto:dhaman211@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                <a href="mailto:dhaman211@gmail.com" className="text-customText-body hover:text-customAccent transition-colors">
                   dhaman211@gmail.com
                 </a>
               </li>
@@ -108,8 +108,8 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 dark:border-gray-800 pt-8 text-center">
-          <p className="text-gray-600 dark:text-gray-400">
+        <div className="border-t border-customText-body/10 pt-8 text-center">
+          <p className="text-customText-body">
             &copy; {currentYear} Dhaman Manikanth. All rights reserved.
           </p>
         </div>
