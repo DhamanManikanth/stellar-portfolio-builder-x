@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #0a0f1c;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
 }
@@ -18,47 +18,58 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  color: #a0a0a0;
+  color: #f1f1f1;
 }
 
 .section {
   padding: 2rem 4rem;
   margin-top: 4rem;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: linear-gradient(90deg, #ea384c 0%, #F97316 100%);
+  border-radius: 3px;
 }
 
 .btn-primary {
-  background-color: #00bfff;
-  color: #0a0f1c;
+  background: linear-gradient(90deg, #ea384c 0%, #F97316 100%);
+  color: #ffffff;
   border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  box-shadow: 0 4px 10px rgba(234, 56, 76, 0.3);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
-  filter: brightness(1.1);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.5);
+  transform: translateY(-2px);
 }
 
 .card {
-  background-color: #1d2736;
+  background: linear-gradient(135deg, #111 0%, #333 100%);
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
 }
 
 .progress-bar {
-  background-color: #1d2736;
+  background-color: #222;
 }
 
 .progress-bar-fill {
-  background-color: #00bfff;
+  background: linear-gradient(90deg, #ea384c 0%, #F97316 100%);
 }
 
 .glow-effect {
-  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 10px rgba(234, 56, 76, 0.5);
 }
 
 .gradient-overlay {
-  background: linear-gradient(to bottom, rgba(10, 15, 28, 0.7), rgba(0, 0, 0, 0.9));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
 }
-
