@@ -6,41 +6,41 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight, Youtube, PlayCircle, ThumbsUp, Eye } from 'lucide-react';
 
 const YouTube = () => {
-  // Demo YouTube videos - replace with your actual videos
+  // Featured YouTube video
   const featuredVideo = {
-    id: "dQw4w9WgXcQ", // Replace with your actual featured video ID
-    title: "How to Build a Full Stack App with React & Node.js",
-    views: "10,523",
-    likes: "1,254",
-    date: "March 15, 2023"
+    id: "O9IhcgqMhB8", // Campus video
+    title: "My Campus Experience",
+    views: "500+",
+    likes: "50+",
+    date: "2023"
   };
   
   const otherVideos = [
     {
-      id: "dQw4w9WgXcQ", // Replace with actual video IDs
-      title: "JavaScript Tips and Tricks for Beginners",
-      views: "8,432",
-      date: "February 20, 2023"
+      id: "O9IhcgqMhB8", // Using the same ID as placeholder, update with actual videos
+      title: "College Vlog #1",
+      views: "300+",
+      date: "2023"
     },
     {
-      id: "dQw4w9WgXcQ",
-      title: "Building a Portfolio Website with React",
-      views: "7,129",
-      date: "January 10, 2023"
+      id: "O9IhcgqMhB8",
+      title: "A Day in My Life as a Student",
+      views: "250+",
+      date: "2023"
     },
     {
-      id: "dQw4w9WgXcQ",
-      title: "Introduction to Machine Learning with Python",
-      views: "6,893",
-      date: "December 5, 2022"
+      id: "O9IhcgqMhB8",
+      title: "Campus Tour",
+      views: "200+",
+      date: "2022"
     }
   ];
 
   // Channel stats
   const channelStats = {
-    subscribers: "5.2K",
-    videos: "45+",
-    views: "150K+"
+    subscribers: "500+",
+    videos: "40+",
+    views: "75K+"
   };
 
   return (
@@ -50,7 +50,7 @@ const YouTube = () => {
           <Badge variant="outline" className="mb-2">My Channel</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">YouTube Content</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I share my technical knowledge, programming tutorials, and tech insights on my YouTube channel.
+            I share my college experiences, campus life, and educational vlogs on my YouTube channel "Dhaman Explores".
           </p>
         </div>
 
@@ -114,7 +114,7 @@ const YouTube = () => {
               <CardContent className="p-6">
                 <div className="flex items-center mb-5">
                   <Youtube size={24} className="text-red-600 mr-3" />
-                  <h3 className="text-xl font-bold">My Channel</h3>
+                  <h3 className="text-xl font-bold">Dhaman Explores</h3>
                 </div>
                 <div className="grid grid-cols-3 gap-2 mb-5">
                   <div className="text-center">
@@ -134,7 +134,7 @@ const YouTube = () => {
                   className="w-full bg-red-600 hover:bg-red-700 text-white"
                   asChild
                 >
-                  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://yt.openinapp.co/28ho8" target="_blank" rel="noopener noreferrer">
                     <Youtube size={20} className="mr-2" /> Subscribe
                   </a>
                 </Button>

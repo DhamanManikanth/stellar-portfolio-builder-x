@@ -8,30 +8,39 @@ const Education = () => {
   const educationData = [
     {
       id: 1,
-      degree: "Bachelor of Technology",
-      specialization: "Computer Science and Engineering",
-      institution: "XYZ University of Technology",
-      duration: "2020 - 2024 (Expected)",
-      description: "Focusing on advanced algorithms, machine learning, and web development. Maintaining a GPA of 3.8/4.0.",
-      achievements: ["Dean's List 2021-2022", "Best Project Award", "Tech Fest Winner"]
+      degree: "BTech",
+      specialization: "Computer Science Engineering",
+      institution: "NxtWave Institute of Advanced Technologies (NIAT)",
+      duration: "2024 - 2028",
+      description: "Currently pursuing BTech in Computer Science. Studying full stack development in progress.",
+      achievements: []
     },
     {
       id: 2,
-      degree: "Intermediate Education",
-      specialization: "Science and Mathematics",
-      institution: "ABC Junior College",
-      duration: "2018 - 2020",
-      description: "Completed intermediate education with a focus on science and mathematics, achieving 92% in board examinations.",
-      achievements: ["School Topper", "Science Olympiad Finalist"]
+      degree: "Bachelor of Science",
+      specialization: "",
+      institution: "",
+      duration: "2024 - 2027",
+      description: "Achieved 7 CGPA/10 in 1st semester.",
+      achievements: []
     },
     {
       id: 3,
+      degree: "Intermediate Education",
+      specialization: "Mathematics, Physics, and Chemistry",
+      institution: "FIITJEE Junior College",
+      duration: "2022 - 2024",
+      description: "Completed intermediate education with focus on Mathematics, Physics, and Chemistry, achieving 84% in board examinations.",
+      achievements: []
+    },
+    {
+      id: 4,
       degree: "High School",
       specialization: "General Education",
-      institution: "PQR School",
-      duration: "2008 - 2018",
-      description: "Completed primary and secondary education with distinction in science and mathematics.",
-      achievements: ["Perfect Attendance Award", "Science Fair Winner"]
+      institution: "Nirmala CBSE High School",
+      duration: "1st - 10th Class",
+      description: "Completed primary and secondary education.",
+      achievements: []
     }
   ];
 
@@ -42,7 +51,7 @@ const Education = () => {
           <Badge variant="outline" className="mb-2">My Journey</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Educational Background</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            My academic journey has equipped me with a strong foundation in computer science and technical expertise.
+            My academic journey has equipped me with a foundation in computer science and technical skills.
           </p>
         </div>
 
@@ -74,11 +83,13 @@ const Education = () => {
                     
                     <p className="text-gray-600 dark:text-gray-400 mb-4">{item.description}</p>
                     
-                    <div className="flex flex-wrap gap-2">
-                      {item.achievements.map((achievement, i) => (
-                        <Badge key={i} variant="secondary">{achievement}</Badge>
-                      ))}
-                    </div>
+                    {item.achievements.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {item.achievements.map((achievement, i) => (
+                          <Badge key={i} variant="secondary">{achievement}</Badge>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>

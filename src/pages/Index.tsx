@@ -9,7 +9,7 @@ import YouTube from '../components/YouTube';
 import SocialMedia from '../components/SocialMedia';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import { Github, Linkedin, Twitter, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Twitter, ArrowUp, Instagram } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -52,7 +52,7 @@ const Index = () => {
       {/* Fixed Social Bar */}
       <div className="fixed left-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gray-300 dark:after:bg-gray-700">
         <a 
-          href="https://github.com" 
+          href="https://github.com/DhamanManikanth" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="social-icon"
@@ -61,7 +61,7 @@ const Index = () => {
           <Github size={20} />
         </a>
         <a 
-          href="https://linkedin.com" 
+          href="https://linkedin.openinapp.co/wf5sr" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="social-icon"
@@ -70,7 +70,7 @@ const Index = () => {
           <Linkedin size={20} />
         </a>
         <a 
-          href="https://twitter.com" 
+          href="https://twtr.openinapp.co/1hm2v" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="social-icon"
@@ -78,16 +78,25 @@ const Index = () => {
         >
           <Twitter size={20} />
         </a>
+        <a 
+          href="https://insta.openinapp.co/f4kag" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="social-icon"
+          aria-label="Instagram"
+        >
+          <Instagram size={20} />
+        </a>
       </div>
       
       {/* Email Side Bar */}
       <div className="fixed right-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gray-300 dark:after:bg-gray-700">
         <a 
-          href="mailto:hello@johndoe.com" 
+          href="mailto:dhaman211@gmail.com" 
           className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors vertical-text tracking-widest"
           style={{ writingMode: 'vertical-rl' }}
         >
-          hello@johndoe.com
+          dhaman211@gmail.com
         </a>
       </div>
       

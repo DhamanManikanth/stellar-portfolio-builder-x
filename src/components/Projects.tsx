@@ -9,39 +9,21 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce application with user authentication, product management, and payment processing.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveLink: "https://project-demo.com",
-      githubLink: "https://github.com/yourusername/ecommerce"
+      title: "BookMyShow Website",
+      description: "A front-end implementation of the BookMyShow platform using HTML/CSS, designed to showcase movie listings and booking interfaces.",
+      image: "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      technologies: ["HTML", "CSS"],
+      liveLink: "https://bookmyshow02.niat.tech",
+      githubLink: "https://github.com/DhamanManikanth"
     },
     {
       id: 2,
-      title: "Social Media Dashboard",
-      description: "A responsive dashboard for tracking and analyzing social media metrics across multiple platforms.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      technologies: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
-      liveLink: "https://project-demo.com",
-      githubLink: "https://github.com/yourusername/social-dashboard"
-    },
-    {
-      id: 3,
-      title: "Task Management App",
-      description: "An intuitive task management application with drag-and-drop interface and real-time updates.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      technologies: ["React", "Firebase", "Tailwind CSS", "DnD Kit"],
-      liveLink: "https://project-demo.com",
-      githubLink: "https://github.com/yourusername/task-manager"
-    },
-    {
-      id: 4,
-      title: "Weather Forecast App",
-      description: "A weather application that provides real-time forecasts and historical weather data for any location.",
-      image: "https://images.unsplash.com/photo-1481487196290-c152efe083f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      technologies: ["React Native", "Weather API", "Geolocation", "Redux"],
-      liveLink: "https://project-demo.com",
-      githubLink: "https://github.com/yourusername/weather-app"
+      title: "Fashion Store Website",
+      description: "A responsive fashion e-commerce website design focused on showcasing products with a clean, modern interface.",
+      image: "https://images.unsplash.com/photo-1445205170230-053b83016050?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      technologies: ["HTML", "CSS"],
+      liveLink: "https://fashioon.niat.tech",
+      githubLink: "https://github.com/DhamanManikanth"
     }
   ];
 
@@ -52,7 +34,7 @@ const Projects = () => {
           <Badge variant="outline" className="mb-2">Portfolio</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A selection of my recent work and personal projects that showcase my skills and expertise.
+            A selection of my work and projects that showcase my front-end development skills.
           </p>
         </div>
 
@@ -91,7 +73,7 @@ const Projects = () => {
                     <Button size="sm" asChild className="group">
                       <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                         <ExternalLink size={16} className="mr-2" />
-                        Demo
+                        Live Demo
                         <ArrowUpRight size={14} className="ml-1 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </a>
                     </Button>

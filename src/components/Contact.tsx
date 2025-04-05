@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Mail, MapPin, Phone, Send, Loader2, Github, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Mail, MapPin, Send, Loader2, Github, Linkedin, Twitter, Youtube, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -67,20 +67,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-lg">Email</h4>
-                      <a href="mailto:hello@johndoe.com" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
-                        hello@johndoe.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0">
-                      <Phone size={20} className="text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Phone</h4>
-                      <a href="tel:+1234567890" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
-                        +1 (234) 567-890
+                      <a href="mailto:dhaman211@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                        dhaman211@gmail.com
                       </a>
                     </div>
                   </div>
@@ -92,7 +80,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-bold text-lg">Location</h4>
                       <p className="text-gray-600 dark:text-gray-400">
-                        San Francisco, CA, USA
+                        Hyderabad, Telangana, India
                       </p>
                     </div>
                   </div>
@@ -102,7 +90,7 @@ const Contact = () => {
                   <h4 className="font-bold text-lg mb-4">Follow Me</h4>
                   <div className="flex space-x-4">
                     <a 
-                      href="https://linkedin.com"
+                      href="https://linkedin.openinapp.co/wf5sr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center social-icon"
@@ -111,7 +99,7 @@ const Contact = () => {
                       <Linkedin size={18} />
                     </a>
                     <a 
-                      href="https://github.com"
+                      href="https://github.com/DhamanManikanth"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center social-icon"
@@ -120,7 +108,7 @@ const Contact = () => {
                       <Github size={18} />
                     </a>
                     <a 
-                      href="https://twitter.com"
+                      href="https://twtr.openinapp.co/1hm2v"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center social-icon"
@@ -129,13 +117,22 @@ const Contact = () => {
                       <Twitter size={18} />
                     </a>
                     <a 
-                      href="https://youtube.com"
+                      href="https://yt.openinapp.co/28ho8"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center social-icon"
                       aria-label="YouTube"
                     >
                       <Youtube size={18} />
+                    </a>
+                    <a 
+                      href="https://insta.openinapp.co/f4kag"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center social-icon"
+                      aria-label="Instagram"
+                    >
+                      <Instagram size={18} />
                     </a>
                   </div>
                 </div>

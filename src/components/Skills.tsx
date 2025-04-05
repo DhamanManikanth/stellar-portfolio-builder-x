@@ -11,64 +11,64 @@ import { Card, CardContent } from "@/components/ui/card";
 const Skills = () => {
   const technicalSkills = [
     { category: "Programming Languages", skills: [
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 85 },
+      { name: "JavaScript", level: 40 },
+      { name: "C++", level: 60 },
       { name: "Python", level: 80 },
-      { name: "Java", level: 75 },
-      { name: "C++", level: 70 }
+      { name: "TypeScript", level: 0 },
+      { name: "Java", level: 0 }
     ]},
     { category: "Frontend", skills: [
-      { name: "React", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "HTML/CSS", level: 95 },
+      { name: "HTML/CSS", level: 100 },
       { name: "Tailwind CSS", level: 90 },
-      { name: "Vue.js", level: 75 }
+      { name: "React", level: 0 },
+      { name: "Next.js", level: 0 },
+      { name: "Vue.js", level: 0 }
     ]},
     { category: "Backend", skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "Django", level: 75 },
-      { name: "MongoDB", level: 80 },
-      { name: "PostgreSQL", level: 75 }
+      { name: "Node.js", level: 0 },
+      { name: "Express", level: 0 },
+      { name: "Django", level: 0 },
+      { name: "MongoDB", level: 0 },
+      { name: "PostgreSQL", level: 0 }
     ]},
     { category: "Tools & Others", skills: [
-      { name: "Git/GitHub", level: 90 },
-      { name: "Docker", level: 75 },
-      { name: "AWS", level: 70 },
-      { name: "CI/CD", level: 65 },
-      { name: "GraphQL", level: 75 }
+      { name: "Git/GitHub", level: 0 },
+      { name: "Docker", level: 0 },
+      { name: "AWS", level: 0 },
+      { name: "CI/CD", level: 0 },
+      { name: "GraphQL", level: 0 }
     ]}
   ];
 
   const personalSkills = [
     {
       title: "Leadership",
-      description: "Experience leading development teams and coordinating project deliverables.",
+      description: "Developing leadership skills through academic projects and group activities.",
       icon: Briefcase
     },
     {
       title: "Communication",
-      description: "Excellent verbal and written communication skills, with experience in technical documentation.",
+      description: "Building effective verbal and written communication skills through content creation.",
       icon: MessageSquare
     },
     {
       title: "Problem Solving",
-      description: "Strong analytical skills with a methodical approach to solving complex technical challenges.",
+      description: "Enhancing analytical skills through programming challenges and projects.",
       icon: Lightbulb
     },
     {
-      title: "Public Speaking",
-      description: "Confident public speaker with experience in technical presentations and workshops.",
+      title: "Content Creation",
+      description: "Creating engaging YouTube videos about college experiences and educational content.",
       icon: Mic
     },
     {
       title: "Creative Thinking",
-      description: "Ability to think outside the box and develop innovative solutions.",
+      description: "Applying creative approach to web development and content creation.",
       icon: PenTool
     },
     {
       title: "Adaptability",
-      description: "Quick to learn new technologies and adapt to changing project requirements.",
+      description: "Quickly adapting to new technologies and learning environments.",
       icon: Zap
     }
   ];

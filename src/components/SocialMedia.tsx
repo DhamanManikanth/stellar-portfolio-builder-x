@@ -3,64 +3,66 @@ import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Linkedin, Github, Twitter, Youtube, 
+  Linkedin, Github, Twitter, Youtube, Instagram,
   Users, Briefcase, GraduationCap, Award, ArrowUpRight 
 } from 'lucide-react';
 
 const SocialMedia = () => {
   const linkedInProfile = {
-    name: "John Doe",
-    title: "Full Stack Developer & Content Creator",
+    name: "Dhaman Manikanth",
+    title: "Student & Web Developer",
     connections: "500+",
     views: "300+",
     experience: [
       {
-        role: "Web Developer",
-        company: "Tech Solutions Inc.",
-        duration: "2022 - Present"
-      },
-      {
-        role: "Frontend Developer Intern",
-        company: "Creative Designs",
-        duration: "2021 - 2022"
+        role: "Web Development Frontend",
+        company: "",
+        duration: ""
       }
     ],
     education: {
-      degree: "Bachelor of Technology",
-      specialization: "Computer Science",
-      institution: "XYZ University",
-      duration: "2020 - 2024 (Expected)"
+      degree: "BTech",
+      specialization: "Computer Science Engineering",
+      institution: "NxtWave Institute of Advanced Technologies",
+      duration: "2024 - 2028"
     }
   };
 
   const socialProfiles = [
     {
       platform: "LinkedIn",
-      handle: "@johndoe",
-      link: "https://linkedin.com/in/johndoe",
+      handle: "@dhamanmanikanth",
+      link: "https://linkedin.openinapp.co/wf5sr",
       icon: Linkedin,
       color: "bg-blue-100 text-blue-600"
     },
     {
       platform: "GitHub",
-      handle: "@johndoe",
-      link: "https://github.com/johndoe",
+      handle: "@DhamanManikanth",
+      link: "https://github.com/DhamanManikanth",
       icon: Github,
       color: "bg-gray-100 text-gray-800"
     },
     {
       platform: "Twitter",
-      handle: "@johndoe",
-      link: "https://twitter.com/johndoe",
+      handle: "@dhamanmanikanth",
+      link: "https://twtr.openinapp.co/1hm2v",
       icon: Twitter,
       color: "bg-sky-100 text-sky-500"
     },
     {
       platform: "YouTube",
-      handle: "John Doe Tech",
-      link: "https://youtube.com/@johndoe",
+      handle: "Dhaman Explores",
+      link: "https://yt.openinapp.co/28ho8",
       icon: Youtube,
       color: "bg-red-100 text-red-600"
+    },
+    {
+      platform: "Instagram",
+      handle: "@dhamanmanikanth",
+      link: "https://insta.openinapp.co/f4kag",
+      icon: Instagram,
+      color: "bg-pink-100 text-pink-600"
     }
   ];
 
@@ -115,7 +117,7 @@ const SocialMedia = () => {
                   {linkedInProfile.experience.map((exp, index) => (
                     <div key={index}>
                       <p className="font-medium">{exp.role}</p>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">{exp.company} • {exp.duration}</p>
+                      {exp.company && <p className="text-gray-600 dark:text-gray-400 text-sm">{exp.company} • {exp.duration}</p>}
                     </div>
                   ))}
                 </div>
@@ -157,7 +159,7 @@ const SocialMedia = () => {
                       <h4 className="font-bold">{profile.platform}</h4>
                       <p className="text-gray-600 dark:text-gray-400 text-sm">{profile.handle}</p>
                     </div>
-                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="ml-auto">
                       <ArrowUpRight size={18} />
                     </div>
                   </CardContent>
