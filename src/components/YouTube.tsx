@@ -6,26 +6,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight, Youtube, PlayCircle, ThumbsUp, Eye } from 'lucide-react';
 
 const YouTube = () => {
-  // Featured YouTube video with updated stats
+  // Featured YouTube video
   const featuredVideo = {
-    id: "CLk6hcX_z30", // College experience video
-    title: "My Experience in College",
-    views: "10K+",
-    likes: "100+",
+    id: "O9IhcgqMhB8", // Campus video
+    title: "My Campus Experience",
+    views: "500+",
+    likes: "50+",
     date: "2023"
   };
   
   const otherVideos = [
     {
-      id: "217FJOJt8So",
-      title: "College Hackathon Experience",
-      views: "500+",
+      id: "O9IhcgqMhB8", // Using the same ID as placeholder, update with actual videos
+      title: "College Vlog #1",
+      views: "300+",
       date: "2023"
     },
     {
-      id: "h-wM8PX4agA",
-      title: "Village Exhibition Coverage",
-      views: "750+",
+      id: "O9IhcgqMhB8",
+      title: "A Day in My Life as a Student",
+      views: "250+",
       date: "2023"
     },
     {
@@ -44,12 +44,12 @@ const YouTube = () => {
   };
 
   return (
-    <section id="youtube" className="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section id="youtube" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-2">My Channel</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-card">YouTube Content</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">YouTube Content</h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             I share my college experiences, campus life, and educational vlogs on my YouTube channel "Dhaman Explores".
           </p>
         </div>
@@ -57,11 +57,11 @@ const YouTube = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Featured Video */}
           <div className="md:col-span-2 animate-fade-in">
-            <h3 className="text-xl font-bold mb-4 flex items-center text-white">
+            <h3 className="text-xl font-bold mb-4 flex items-center">
               <PlayCircle size={20} className="text-red-600 mr-2" />
               Featured Video
             </h3>
-            <Card className="h-full bg-gradient-to-br from-gray-900 to-black border border-gray-800">
+            <Card className="h-full">
               <CardContent className="p-0 overflow-hidden">
                 <div className="relative aspect-video">
                   <img 
@@ -81,13 +81,13 @@ const YouTube = () => {
                   </a>
                 </div>
                 <div className="p-5">
-                  <h4 className="text-xl font-bold mb-3 text-white">{featuredVideo.title}</h4>
+                  <h4 className="text-xl font-bold mb-3">{featuredVideo.title}</h4>
                   <div className="flex flex-wrap gap-4 mb-4">
-                    <div className="flex items-center text-gray-400">
+                    <div className="flex items-center text-gray-500 dark:text-gray-400">
                       <Eye size={16} className="mr-1" />
                       {featuredVideo.views} views
                     </div>
-                    <div className="flex items-center text-gray-400">
+                    <div className="flex items-center text-gray-500 dark:text-gray-400">
                       <ThumbsUp size={16} className="mr-1" />
                       {featuredVideo.likes} likes
                     </div>
@@ -95,7 +95,7 @@ const YouTube = () => {
                   <Button 
                     variant="outline" 
                     asChild
-                    className="group border-red-600 text-white hover:bg-red-600/20"
+                    className="group"
                   >
                     <a href={`https://www.youtube.com/watch?v=${featuredVideo.id}`} target="_blank" rel="noopener noreferrer">
                       Watch Video 
@@ -110,24 +110,24 @@ const YouTube = () => {
           {/* Channel Info & More Videos */}
           <div className="flex flex-col gap-8">
             {/* Channel Info */}
-            <Card className="animate-fade-in stagger-1 bg-gradient-to-br from-gray-900 to-black border border-gray-800">
+            <Card className="animate-fade-in stagger-1">
               <CardContent className="p-6">
                 <div className="flex items-center mb-5">
                   <Youtube size={24} className="text-red-600 mr-3" />
-                  <h3 className="text-xl font-bold text-white">Dhaman Explores</h3>
+                  <h3 className="text-xl font-bold">Dhaman Explores</h3>
                 </div>
                 <div className="grid grid-cols-3 gap-2 mb-5">
                   <div className="text-center">
-                    <p className="text-xl font-bold text-white">{channelStats.subscribers}</p>
-                    <p className="text-gray-400 text-sm">Subscribers</p>
+                    <p className="text-xl font-bold">{channelStats.subscribers}</p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">Subscribers</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-xl font-bold text-white">{channelStats.videos}</p>
-                    <p className="text-gray-400 text-sm">Videos</p>
+                    <p className="text-xl font-bold">{channelStats.videos}</p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">Videos</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-xl font-bold text-white">{channelStats.views}</p>
-                    <p className="text-gray-400 text-sm">Views</p>
+                    <p className="text-xl font-bold">{channelStats.views}</p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">Views</p>
                   </div>
                 </div>
                 <Button 
@@ -143,7 +143,7 @@ const YouTube = () => {
 
             {/* More Videos */}
             <div className="animate-fade-in stagger-2">
-              <h3 className="text-xl font-bold mb-4 text-white">More Videos</h3>
+              <h3 className="text-xl font-bold mb-4">More Videos</h3>
               <div className="space-y-4">
                 {otherVideos.map((video, index) => (
                   <a 
@@ -164,10 +164,10 @@ const YouTube = () => {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm group-hover:text-red-400 transition-colors line-clamp-2 text-white">
+                      <h4 className="font-medium text-sm group-hover:text-primary transition-colors line-clamp-2">
                         {video.title}
                       </h4>
-                      <p className="text-gray-400 text-xs mt-1">
+                      <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">
                         {video.views} views • {video.date}
                       </p>
                     </div>

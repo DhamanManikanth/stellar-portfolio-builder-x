@@ -38,45 +38,19 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen page-bg">
-      <div className="fixed inset-0 -z-10 h-full w-full bg-black bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-25"></div>
+    <div className="min-h-screen">
       <Navbar />
       <Hero />
-      
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <Education />
-      </div>
-      
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <Skills />
-      </div>
-      
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <YouTube />
-      </div>
-      
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <Projects />
-      </div>
-      
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <SocialMedia />
-      </div>
-      
-      <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-10"></div>
-        <Contact />
-      </div>
-      
+      <Education />
+      <Skills />
+      <YouTube />
+      <Projects />
+      <SocialMedia />
+      <Contact />
       <Footer />
       
       {/* Fixed Social Bar */}
-      <div className="fixed left-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gradient-to-t after:from-vibrant-red after:to-vibrant-orange/30">
+      <div className="fixed left-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gray-300 dark:after:bg-gray-700">
         <a 
           href="https://github.com/DhamanManikanth" 
           target="_blank" 
@@ -116,10 +90,10 @@ const Index = () => {
       </div>
       
       {/* Email Side Bar */}
-      <div className="fixed right-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gradient-to-t after:from-vibrant-red after:to-vibrant-orange/30">
+      <div className="fixed right-6 bottom-0 hidden lg:flex flex-col items-center gap-5 after:content-[''] after:w-px after:h-[100px] after:bg-gray-300 dark:after:bg-gray-700">
         <a 
           href="mailto:dhaman211@gmail.com" 
-          className="text-gray-300 hover:text-vibrant-red transition-colors vertical-text tracking-widest"
+          className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors vertical-text tracking-widest"
           style={{ writingMode: 'vertical-rl' }}
         >
           dhaman211@gmail.com
@@ -129,7 +103,7 @@ const Index = () => {
       {/* Back to Top Button */}
       <button 
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed right-6 bottom-6 w-10 h-10 rounded-full bg-gradient-to-r from-vibrant-red to-vibrant-orange text-white flex items-center justify-center shadow-glow-red hover:shadow-glow-orange transition-all z-10"
+        className="fixed right-6 bottom-6 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors z-10"
         aria-label="Back to top"
       >
         <ArrowUp size={18} />
