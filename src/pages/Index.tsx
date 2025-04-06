@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -15,7 +14,7 @@ import { Github, Linkedin, Twitter, ArrowUp, Instagram } from 'lucide-react';
 const Index = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [cursorVisible, setCursorVisible] = useState(false);
+  const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
     // Initialize skill bars animation
@@ -79,24 +78,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen page-bg">
-      {cursorVisible && (
-        <>
-          <div 
-            className={`custom-cursor ${isHovering ? 'hover' : ''}`} 
-            style={{ 
-              left: `${cursorPosition.x}px`, 
-              top: `${cursorPosition.y}px` 
-            }}
-          />
-          <div 
-            className={`custom-cursor-follower ${cursorVisible ? 'active' : ''}`} 
-            style={{ 
-              left: `${cursorPosition.x}px`, 
-              top: `${cursorPosition.y}px` 
-            }}
-          />
-        </>
-      )}
+      {/* Custom cursor - always shown with improved visibility */}
+      <div 
+        className={`custom-cursor ${isHovering ? 'hover' : ''}`} 
+        style={{ 
+          left: `${cursorPosition.x}px`, 
+          top: `${cursorPosition.y}px` 
+        }}
+      />
+      <div 
+        className={`custom-cursor-follower ${cursorVisible ? 'active' : ''}`} 
+        style={{ 
+          left: `${cursorPosition.x}px`, 
+          top: `${cursorPosition.y}px` 
+        }}
+      />
       
       <div className="fixed inset-0 -z-10 h-full w-full bg-black bg-[radial-gradient(#333_1px,transparent_1px)] bg-[size:20px_20px] opacity-25"></div>
       <Navbar />
