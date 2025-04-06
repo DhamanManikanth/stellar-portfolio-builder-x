@@ -6,16 +6,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight, Youtube, PlayCircle, ThumbsUp, Eye } from 'lucide-react';
 
 const YouTube = () => {
-  // Featured YouTube video with updated stats
+  // Featured YouTube video with updated stats - Changed to campus tour video
   const featuredVideo = {
-    id: "CLk6hcX_z30", // College experience video
-    title: "My Experience in College",
-    views: "10K+",
-    likes: "100+",
-    date: "2023"
+    id: "O9IhcgqMhB8", // Campus tour video
+    title: "Campus Tour",
+    views: "200+",
+    likes: "50+",
+    date: "2022"
   };
   
   const otherVideos = [
+    {
+      id: "CLk6hcX_z30",
+      title: "My Experience in College",
+      views: "10K+",
+      date: "2023"
+    },
     {
       id: "217FJOJt8So",
       title: "College Hackathon Experience",
@@ -27,12 +33,6 @@ const YouTube = () => {
       title: "Village Exhibition Coverage",
       views: "750+",
       date: "2023"
-    },
-    {
-      id: "O9IhcgqMhB8",
-      title: "Campus Tour",
-      views: "200+",
-      date: "2022"
     }
   ];
 

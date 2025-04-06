@@ -10,27 +10,18 @@ import SocialMedia from '../components/SocialMedia';
 import Contact from '../components/Contact';
 import StarRating from '../components/StarRating';
 import Footer from '../components/Footer';
-import CustomCursor from '../components/CustomCursor';
 import FixedSocialBar from '../components/FixedSocialBar';
 import EmailSidebar from '../components/EmailSidebar';
 import BackToTopButton from '../components/BackToTopButton';
 import BackgroundPattern from '../components/BackgroundPattern';
 import SectionDivider from '../components/SectionDivider';
-import { useCustomCursor } from '../hooks/useCustomCursor';
 import { useSkillBarsAnimation } from '../hooks/useSkillBarsAnimation';
 
 const Index = () => {
-  const { cursorPosition, isHovering, cursorVisible } = useCustomCursor();
   useSkillBarsAnimation();
 
   return (
     <div className="min-h-screen page-bg">
-      <CustomCursor 
-        cursorPosition={cursorPosition}
-        isHovering={isHovering}
-        cursorVisible={cursorVisible}
-      />
-      
       <BackgroundPattern />
       <Navbar />
       <Hero />

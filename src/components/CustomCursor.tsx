@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 interface CustomCursorProps {
   cursorPosition: { x: number, y: number };
@@ -14,20 +13,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
 }) => {
   return (
     <>
-      <div 
-        className={`custom-cursor ${isHovering ? 'hover' : ''}`} 
-        style={{ 
-          left: `${cursorPosition.x}px`, 
-          top: `${cursorPosition.y}px` 
-        }}
-      />
-      <div 
-        className={`custom-cursor-follower ${cursorVisible ? 'active' : ''}`} 
-        style={{ 
-          left: `${cursorPosition.x}px`, 
-          top: `${cursorPosition.y}px` 
-        }}
-      />
+      {/* We'll remove the custom cursor since we're going back to normal cursor */}
     </>
   );
 };

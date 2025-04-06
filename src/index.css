@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,7 +47,7 @@
     @apply bg-black text-white font-poppins;
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     min-height: 100vh;
-    cursor: none;
+    cursor: auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -59,9 +58,9 @@
     @apply text-gray-200 font-normal;
   }
   
-  /* Ensure links and buttons show pointer cursor for accessibility */
+  /* Ensure links and buttons show normal cursor for accessibility */
   a, button, [role="button"], .hover-effect {
-    @apply cursor-none;
+    @apply cursor-pointer;
   }
 }
 

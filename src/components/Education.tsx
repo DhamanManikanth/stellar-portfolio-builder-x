@@ -39,7 +39,7 @@ const Education = () => {
       specialization: "General Education",
       institution: "Nirmala CBSE High School",
       duration: "1st - 10th Class",
-      description: "Completed primary and secondary education.",
+      description: "Completed primary and secondary education with 70% in 10th grade.",
       achievements: []
     }
   ];

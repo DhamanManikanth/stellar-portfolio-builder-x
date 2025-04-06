@@ -9,45 +9,7 @@ body {
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
-  cursor: none; /* Hide default cursor when using custom cursor */
-}
-
-/* Custom cursor styles */
-.custom-cursor {
-  position: fixed;
-  pointer-events: none;
-  width: 30px;
-  height: 30px;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  background-image: url('/lovable-uploads/f2491f04-ea5b-43ab-b834-ffe87413ed5c.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: brightness(1.2) drop-shadow(0 0 5px #00ff2a);
-}
-
-.custom-cursor.hover {
-  width: 35px;
-  height: 35px;
-  filter: brightness(1.5) drop-shadow(0 0 8px #00ff2a);
-  transition: width 0.2s, height 0.2s, filter 0.2s;
-}
-
-.custom-cursor-follower {
-  position: fixed;
-  pointer-events: none;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 255, 42, 0.15) 0%, rgba(0, 255, 42, 0) 70%);
-  transform: translate(-50%, -50%);
-  z-index: 9998;
-  opacity: 0;
-  transition: opacity 0.3s, width 0.3s, height 0.3s;
-}
-
-.custom-cursor-follower.active {
-  opacity: 1;
+  cursor: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -112,7 +74,6 @@ p {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
 }
 
-/* Star Rating specific styles */
 .star-icon {
   filter: drop-shadow(0 0 2px rgba(250, 204, 21, 0.5));
   transition: all 0.2s ease;
