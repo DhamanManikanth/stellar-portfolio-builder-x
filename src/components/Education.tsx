@@ -8,20 +8,20 @@ const Education = () => {
   const educationData = [
     {
       id: 1,
-      degree: "BTech",
-      specialization: "Computer Science Engineering",
+      degree: "Computer Science",
+      specialization: "",
       institution: "NxtWave Institute of Advanced Technologies (NIAT)",
       duration: "2024 - 2028",
-      description: "Currently pursuing BTech in Computer Science. Studying full stack development in progress.",
+      description: "Currently studying Computer Science at NxtWave. Learning full stack development and other advanced technologies.",
       achievements: []
     },
     {
       id: 2,
       degree: "Bachelor of Science",
       specialization: "",
-      institution: "",
+      institution: "BITS Pilani Hyderabad",
       duration: "2024 - 2027",
-      description: "Achieved 7 CGPA/10 in 1st semester.",
+      description: "Pursuing Bachelor of Science degree at BITS Pilani Hyderabad campus. Achieved 7 CGPA/10 in 1st semester.",
       achievements: []
     },
     {

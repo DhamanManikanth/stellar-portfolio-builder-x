@@ -1,8 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 @layer base {
   :root {
@@ -47,6 +48,7 @@
     @apply bg-black text-white font-poppins;
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     min-height: 100vh;
+    cursor: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -55,6 +57,11 @@
 
   p {
     @apply text-gray-200 font-normal;
+  }
+  
+  /* Ensure links and buttons show pointer cursor for accessibility */
+  a, button, [role="button"], .hover-effect {
+    @apply cursor-none;
   }
 }
 
@@ -257,4 +264,27 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Hover effect for interactive elements */
+.hover-effect {
+  @apply transition-all duration-300;
+}
+
+/* Star rating styles */
+.star-rating-container {
+  @apply flex justify-center mb-4;
+}
+
+.star-rating {
+  @apply inline-flex gap-1;
+}
+
+.star-active {
+  color: #facc15;
+  filter: drop-shadow(0 0 2px rgba(250, 204, 21, 0.5));
+}
+
+.star-inactive {
+  color: #d1d5db;
 }

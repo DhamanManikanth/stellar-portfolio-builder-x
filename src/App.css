@@ -10,6 +10,47 @@ body {
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
+  cursor: none; /* Hide default cursor when using custom cursor */
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #ea384c 0%, #F97316 100%);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: exclusion;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s;
+  box-shadow: 0 0 20px rgba(234, 56, 76, 0.8);
+}
+
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, #F97316 0%, #ea384c 100%);
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  pointer-events: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(234, 56, 76, 0.15) 0%, rgba(249, 115, 22, 0) 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s, width 0.3s, height 0.3s;
+}
+
+.custom-cursor-follower.active {
+  opacity: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -72,4 +113,15 @@ p {
 
 .gradient-overlay {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+}
+
+/* Star Rating specific styles */
+.star-icon {
+  filter: drop-shadow(0 0 2px rgba(250, 204, 21, 0.5));
+  transition: all 0.2s ease;
+}
+
+.star-icon:hover {
+  filter: drop-shadow(0 0 5px rgba(250, 204, 21, 0.8));
+  transform: scale(1.1);
 }
