@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -78,7 +79,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen page-bg">
-      {/* Custom cursor - always shown with improved visibility */}
+      {/* Custom cursor - green mouse pointer */}
       <div 
         className={`custom-cursor ${isHovering ? 'hover' : ''}`} 
         style={{ 
