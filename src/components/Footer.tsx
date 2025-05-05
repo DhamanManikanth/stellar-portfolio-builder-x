@@ -45,7 +45,7 @@ const Footer = () => {
                 <Twitter size={20} />
               </a>
               <a 
-                href="https://yt.openinapp.co/28ho8" 
+                href="https://yt.openinapp.co/1mc21" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-icon"

@@ -11,8 +11,8 @@ const SocialMedia = () => {
   const linkedInProfile = {
     name: "Dhaman Manikanth",
     title: "Student & Web Developer",
-    connections: "500+",
-    views: "300+",
+    connections: "1600+", // Updated followers count
+    views: "2000+", // Updated profile views
     experience: [
       {
         role: "Web Development Frontend",
@@ -53,7 +53,7 @@ const SocialMedia = () => {
     {
       platform: "YouTube",
       handle: "Dhaman Explores",
-      link: "https://yt.openinapp.co/28ho8",
+      link: "https://yt.openinapp.co/1mc21", // Updated YouTube link
       icon: Youtube,
       color: "bg-red-800/30 text-red-500"
     },
@@ -96,7 +96,7 @@ const SocialMedia = () => {
                   <Users size={18} className="text-blue-500 mr-2" />
                   <div>
                     <p className="font-bold text-white">{linkedInProfile.connections}</p>
-                    <p className="text-gray-400 text-sm">Connections</p>
+                    <p className="text-gray-400 text-sm">Followers</p>
                   </div>
                 </div>
                 <div className="flex items-center">

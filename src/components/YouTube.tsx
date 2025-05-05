@@ -6,9 +6,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight, Youtube, PlayCircle, ThumbsUp, Eye } from 'lucide-react';
 
 const YouTube = () => {
-  // Featured YouTube video with updated stats - Changed to campus tour video
+  // Featured YouTube video with updated ID
   const featuredVideo = {
-    id: "O9IhcgqMhB8", // Campus tour video
+    id: "TVXcPydn9gI", // Updated featured video
     title: "Campus Tour",
     views: "200+",
     likes: "50+",
@@ -36,9 +36,9 @@ const YouTube = () => {
     }
   ];
 
-  // Channel stats
+  // Updated channel stats
   const channelStats = {
-    subscribers: "500+",
+    subscribers: "800+", // Updated subscribers count
     videos: "40+",
     views: "75K+"
   };
@@ -134,7 +134,7 @@ const YouTube = () => {
                   className="w-full bg-red-600 hover:bg-red-700 text-white"
                   asChild
                 >
-                  <a href="https://yt.openinapp.co/28ho8" target="_blank" rel="noopener noreferrer">
+                  <a href="https://yt.openinapp.co/1mc21" target="_blank" rel="noopener noreferrer">
                     <Youtube size={20} className="mr-2" /> Subscribe
                   </a>
                 </Button>
