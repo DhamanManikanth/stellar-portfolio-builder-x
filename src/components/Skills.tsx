@@ -1,43 +1,99 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Code, Cpu, Layout, Lightbulb, MessageSquare, Mic, 
-  PenTool, Globe, Zap, Briefcase
+  Code, Lightbulb, MessageSquare, Mic, 
+  PenTool, Zap, Briefcase
 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent } from "@/components/ui/card";
 
 const Skills = () => {
   const technicalSkills = [
-    { category: "Programming Languages", skills: [
-      { name: "JavaScript", level: 40 },
-      { name: "C++", level: 60 },
-      { name: "Python", level: 80 },
-      { name: "TypeScript", level: 0 },
-      { name: "Java", level: 0 }
-    ]},
-    { category: "Frontend", skills: [
-      { name: "HTML/CSS", level: 100 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "React", level: 0 },
-      { name: "Next.js", level: 0 },
-      { name: "Vue.js", level: 0 }
-    ]},
-    { category: "Backend", skills: [
-      { name: "Node.js", level: 0 },
-      { name: "Express", level: 0 },
-      { name: "Django", level: 0 },
-      { name: "MongoDB", level: 0 },
-      { name: "PostgreSQL", level: 0 }
-    ]},
-    { category: "Tools & Others", skills: [
-      { name: "Git/GitHub", level: 0 },
-      { name: "Docker", level: 0 },
-      { name: "AWS", level: 0 },
-      { name: "CI/CD", level: 0 },
-      { name: "GraphQL", level: 0 }
-    ]}
+    { 
+      name: "JavaScript", 
+      level: 40, 
+      status: "Still Learning",
+      icon: "⚡",
+      color: "from-yellow-500 to-yellow-600"
+    },
+    { 
+      name: "C++", 
+      level: 60, 
+      status: "Intermediate",
+      icon: "🔧",
+      color: "from-blue-500 to-blue-600"
+    },
+    { 
+      name: "Python", 
+      level: 80, 
+      status: "Almost Completed",
+      icon: "🐍",
+      color: "from-green-500 to-green-600"
+    },
+    { 
+      name: "TypeScript", 
+      level: 0, 
+      status: "Not Started",
+      icon: "🔷",
+      color: "from-blue-400 to-blue-500"
+    },
+    { 
+      name: "Java", 
+      level: 0, 
+      status: "Not Started",
+      icon: "☕",
+      color: "from-orange-500 to-red-500"
+    },
+    { 
+      name: "HTML/CSS", 
+      level: 100, 
+      status: "Completed",
+      icon: "🎨",
+      color: "from-orange-500 to-pink-500"
+    },
+    { 
+      name: "Tailwind CSS", 
+      level: 90, 
+      status: "Almost Completed",
+      icon: "💨",
+      color: "from-cyan-500 to-blue-500"
+    },
+    { 
+      name: "React", 
+      level: 0, 
+      status: "Not Started",
+      icon: "⚛️",
+      color: "from-blue-400 to-cyan-400"
+    },
+    { 
+      name: "Next.js", 
+      level: 0, 
+      status: "Not Started",
+      icon: "▲",
+      color: "from-gray-600 to-gray-800"
+    },
+    { 
+      name: "Node.js", 
+      level: 0, 
+      status: "Not Started",
+      icon: "🟢",
+      color: "from-green-600 to-green-700"
+    },
+    { 
+      name: "Git/GitHub", 
+      level: 0, 
+      status: "Not Started",
+      icon: "🐙",
+      color: "from-gray-700 to-gray-900"
+    },
+    { 
+      name: "Docker", 
+      level: 0, 
+      status: "Not Started",
+      icon: "🐳",
+      color: "from-blue-600 to-blue-700"
+    }
   ];
 
   const personalSkills = [
@@ -95,8 +151,23 @@ const Skills = () => {
     };
   }, []);
 
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "Completed":
+        return "text-green-400 bg-green-400/10 border-green-400/20";
+      case "Almost Completed":
+        return "text-blue-400 bg-blue-400/10 border-blue-400/20";
+      case "Intermediate":
+        return "text-yellow-400 bg-yellow-400/10 border-yellow-400/20";
+      case "Still Learning":
+        return "text-orange-400 bg-orange-400/10 border-orange-400/20";
+      default:
+        return "text-gray-400 bg-gray-400/10 border-gray-400/20";
+    }
+  };
+
   return (
-    <section id="skills" className="py-20 bg-customDark-card" ref={skillsRef}>
+    <section id="skills" className="py-20 bg-customDark-card relative" ref={skillsRef}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-2 border-customAccent text-customAccent">Expertise</Badge>
@@ -106,7 +177,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="technical" className="max-w-5xl mx-auto">
+        <Tabs defaultValue="technical" className="max-w-7xl mx-auto">
           <TabsList className="grid w-full grid-cols-2 mb-12 bg-customDark-background">
             <TabsTrigger 
               value="technical" 
@@ -123,37 +194,37 @@ const Skills = () => {
           </TabsList>
           
           <TabsContent value="technical" className="mt-0">
-            <div className="grid md:grid-cols-2 gap-8">
-              {technicalSkills.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="animate-fade-in" style={{ animationDelay: `${0.1 * categoryIndex}s` }}>
-                  <div className="mb-6">
-                    <div className="flex items-center mb-4">
-                      {categoryIndex === 0 && <Code size={20} className="mr-2 text-customAccent" />}
-                      {categoryIndex === 1 && <Layout size={20} className="mr-2 text-customAccent" />}
-                      {categoryIndex === 2 && <Globe size={20} className="mr-2 text-customAccent" />}
-                      {categoryIndex === 3 && <Cpu size={20} className="mr-2 text-customAccent" />}
-                      <h3 className="text-xl font-bold text-white">{category.category}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {technicalSkills.map((skill, index) => (
+                <Card key={index} className="animate-fade-in tech-skill-card bg-customDark-background border-gray-800 hover:border-customAccent/50 transition-all duration-300" style={{ animationDelay: `${0.1 * index}s` }}>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-3xl">{skill.icon}</div>
+                      <div className={`text-xs px-2 py-1 rounded-full border ${getStatusColor(skill.status)}`}>
+                        {skill.status}
+                      </div>
                     </div>
                     
-                    <div className="space-y-5">
-                      {category.skills.map((skill, index) => (
-                        <div key={index}>
-                          <div className="flex justify-between mb-1">
-                            <span className="font-medium text-white">{skill.name}</span>
-                            <span className="text-customText-body">{skill.level}%</span>
-                          </div>
-                          <div className="skill-bar">
-                            <div 
-                              className="skill-progress" 
-                              style={{ width: '0%', transitionDelay: `${0.1 * (index + 1)}s` }}
-                              data-width={`${skill.level}%`}
-                            ></div>
-                          </div>
-                        </div>
-                      ))}
+                    <h3 className="text-lg font-bold mb-3 text-white">{skill.name}</h3>
+                    
+                    <div className="mb-3">
+                      <div className="flex justify-between mb-2">
+                        <span className="text-sm text-customText-body">Progress</span>
+                        <span className="text-sm font-medium text-white">{skill.level}%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
+                        <div 
+                          className={`h-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out rounded-full skill-progress`}
+                          style={{ 
+                            width: '0%',
+                            transitionDelay: `${0.1 * (index + 1)}s`
+                          }}
+                          data-width={`${skill.level}%`}
+                        ></div>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </TabsContent>

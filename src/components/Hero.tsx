@@ -12,8 +12,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center py-20 px-4 bg-customDark-background">
-      <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center py-20 px-4 bg-customDark-background relative overflow-hidden">
+      {/* Animated Space Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="space-particles"></div>
+        <div className="twinkling-stars"></div>
+      </div>
+      
+      <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
         <div className="order-2 md:order-1">
           <h2 className="text-xl font-medium text-customAccent animate-fade-in mb-2">Hello, I'm</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in stagger-1 text-white">
@@ -90,7 +96,7 @@ const Hero = () => {
           <div className="relative">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-customAccent shadow-glow-md animate-scale-in glow-effect">
               <img 
-                src="/lovable-uploads/20efa489-98cf-43be-830e-90881261d9f6.png" 
+                src="/lovable-uploads/2a6d0cd2-efdf-4236-8024-d10a715b30a3.png" 
                 alt="Dhaman Manikanth" 
                 className="w-full h-full object-cover"
               />

@@ -6,16 +6,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight, Youtube, PlayCircle, ThumbsUp, Eye } from 'lucide-react';
 
 const YouTube = () => {
-  // Featured YouTube video with updated ID
+  // Updated featured YouTube video
   const featuredVideo = {
-    id: "TVXcPydn9gI", // Updated featured video
-    title: "Campus Tour",
-    views: "200+",
-    likes: "50+",
-    date: "2022"
+    id: "l-pV4vQPSPY", // New featured video ID from the provided link
+    title: "Latest College Experience",
+    views: "500+",
+    likes: "75+",
+    date: "2024"
   };
   
   const otherVideos = [
+    {
+      id: "TVXcPydn9gI",
+      title: "Campus Tour",
+      views: "200+",
+      date: "2022"
+    },
     {
       id: "CLk6hcX_z30",
       title: "My Experience in College",
@@ -27,24 +33,18 @@ const YouTube = () => {
       title: "College Hackathon Experience",
       views: "500+",
       date: "2023"
-    },
-    {
-      id: "h-wM8PX4agA",
-      title: "Village Exhibition Coverage",
-      views: "750+",
-      date: "2023"
     }
   ];
 
   // Updated channel stats
   const channelStats = {
-    subscribers: "800+", // Updated subscribers count
-    videos: "40+",
-    views: "75K+"
+    subscribers: "1,000", // Updated as requested
+    videos: "61", // Updated as requested
+    views: "200,000+" // Updated as requested
   };
 
   return (
-    <section id="youtube" className="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section id="youtube" className="py-20 bg-gradient-to-b from-black to-gray-900 relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-2">My Channel</Badge>
@@ -116,18 +116,18 @@ const YouTube = () => {
                   <Youtube size={24} className="text-red-600 mr-3" />
                   <h3 className="text-xl font-bold text-white">Dhaman Explores</h3>
                 </div>
-                <div className="grid grid-cols-3 gap-2 mb-5">
-                  <div className="text-center">
+                <div className="grid grid-cols-1 gap-3 mb-5">
+                  <div className="text-center bg-red-600/10 p-3 rounded-lg border border-red-600/20">
                     <p className="text-xl font-bold text-white">{channelStats.subscribers}</p>
                     <p className="text-gray-400 text-sm">Subscribers</p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-red-600/10 p-3 rounded-lg border border-red-600/20">
                     <p className="text-xl font-bold text-white">{channelStats.videos}</p>
                     <p className="text-gray-400 text-sm">Videos</p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-red-600/10 p-3 rounded-lg border border-red-600/20">
                     <p className="text-xl font-bold text-white">{channelStats.views}</p>
-                    <p className="text-gray-400 text-sm">Views</p>
+                    <p className="text-gray-400 text-sm">Total Views</p>
                   </div>
                 </div>
                 <Button 

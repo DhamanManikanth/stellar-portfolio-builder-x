@@ -4,15 +4,15 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Linkedin, Github, Twitter, Youtube, Instagram,
-  Users, Briefcase, GraduationCap, Award, ArrowUpRight 
+  Users, Briefcase, GraduationCap, Award, ArrowUpRight, TrendingUp 
 } from 'lucide-react';
 
 const SocialMedia = () => {
   const linkedInProfile = {
     name: "Dhaman Manikanth",
     title: "Student & Web Developer",
-    connections: "1600+", // Updated followers count
-    views: "2000+", // Updated profile views
+    followers: "2,000", // Updated followers count
+    impressions: "200,000+", // Updated impressions
     experience: [
       {
         role: "Web Development Frontend",
@@ -53,7 +53,7 @@ const SocialMedia = () => {
     {
       platform: "YouTube",
       handle: "Dhaman Explores",
-      link: "https://yt.openinapp.co/1mc21", // Updated YouTube link
+      link: "https://yt.openinapp.co/1mc21",
       icon: Youtube,
       color: "bg-red-800/30 text-red-500"
     },
@@ -67,7 +67,7 @@ const SocialMedia = () => {
   ];
 
   return (
-    <section id="social" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <section id="social" className="py-20 bg-gradient-to-b from-gray-900 to-black relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-2">Connect</Badge>
@@ -92,20 +92,32 @@ const SocialMedia = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="flex items-center">
+                <div className="flex items-center bg-blue-600/10 p-4 rounded-lg border border-blue-600/20">
                   <Users size={18} className="text-blue-500 mr-2" />
                   <div>
-                    <p className="font-bold text-white">{linkedInProfile.connections}</p>
+                    <p className="font-bold text-white">{linkedInProfile.followers}</p>
                     <p className="text-gray-400 text-sm">Followers</p>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <Award size={18} className="text-blue-500 mr-2" />
+                <div className="flex items-center bg-blue-600/10 p-4 rounded-lg border border-blue-600/20">
+                  <TrendingUp size={18} className="text-blue-500 mr-2" />
                   <div>
-                    <p className="font-bold text-white">{linkedInProfile.views}</p>
-                    <p className="text-gray-400 text-sm">Profile Views</p>
+                    <p className="font-bold text-white">{linkedInProfile.impressions}</p>
+                    <p className="text-gray-400 text-sm">Impressions</p>
                   </div>
                 </div>
+              </div>
+
+              {/* Motivating Caption */}
+              <div className="mb-6 p-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg border border-blue-500/30">
+                <div className="flex items-center mb-2">
+                  <Award size={18} className="text-blue-400 mr-2" />
+                  <h5 className="font-bold text-blue-400">Journey Status</h5>
+                </div>
+                <p className="text-white font-medium">Still Building and Growing</p>
+                <p className="text-gray-400 text-sm mt-1">
+                  Every day is a new opportunity to learn, connect, and inspire others on this amazing journey!
+                </p>
               </div>
               
               <div className="mb-6">

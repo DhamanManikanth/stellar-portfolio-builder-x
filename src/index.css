@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,7 +52,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-raleway font-bold text-white;
+    @apply font-poppins font-bold text-white;
   }
 
   p {
@@ -62,6 +63,74 @@
   a, button, [role="button"], .hover-effect {
     @apply cursor-pointer;
   }
+}
+
+/* Space-themed animated background */
+.space-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.space-particles::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.3), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: float 20s infinite linear;
+}
+
+.twinkling-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.twinkling-stars::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 25px 25px, rgba(0, 191, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 75px 75px, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 125px 25px, rgba(0, 191, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 175px 125px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 225px 75px, rgba(0, 191, 255, 0.8), transparent);
+  background-repeat: repeat;
+  background-size: 250px 150px;
+  animation: twinkle 15s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-10px) translateX(5px); }
+  66% { transform: translateY(5px) translateX(-5px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
 }
 
 /* Custom animations */
@@ -116,6 +185,14 @@
 .skill-progress {
   height: 100%;
   @apply bg-gradient-to-r from-vibrant-red to-vibrant-orange rounded-full transition-all duration-1000 ease-out;
+}
+
+.tech-skill-card {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+.tech-skill-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
 }
 
 .timeline-item {
